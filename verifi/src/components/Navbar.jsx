@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Search, Moon, Menu, Sun } from "lucide-react";
 import { ThemeContext } from "../context/ThemeContext";
+import { Link } from "react-router-dom";
 
 const links = [
   "Business",
@@ -25,12 +26,13 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-6">
           {links.map((link) => {
             return (
-              <p
+              <Link
+                to={link}
                 key={link}
                 className="text-pink-300 hover:text-pink-400 transition"
               >
                 {link}
-              </p>
+              </Link>
             );
           })}
         </div>
