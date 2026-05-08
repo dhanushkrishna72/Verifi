@@ -18,9 +18,9 @@ const Navbar = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
   return (
-    <div className="fixed w-full bg-white dark:bg-pink-800 z-10 shadow-md">
+    <div className="fixed w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 z-10 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <div className="md:text-2xl text-lg font-bold dark:text-pink-200 text-pink-600 cursor-pointer">
+        <div className="md:text-2xl text-lg font-bold text-indigo-400 dark:text-blue-400 cursor-pointer">
           Verifi
         </div>
         <div className="hidden lg:flex space-x-6">
@@ -29,7 +29,7 @@ const Navbar = () => {
               <Link
                 to={link}
                 key={link}
-                className="text-pink-300 hover:text-pink-400 transition"
+                className="text-indigo-400 dark:text-blue-400 transition"
               >
                 {link}
               </Link>

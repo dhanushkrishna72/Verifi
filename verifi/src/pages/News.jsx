@@ -21,7 +21,7 @@ const News = ({ country, category, articles, setArticles }) => {
     fetchAllNews();
   }, [category]);
   return (
-    <div className="bg-pink-100 dark:bg-pink-700 py-24 px-4 md:px-0">
+    <div className="bg-slate-50 dark:bg-slate-950 py-24 px-4 md:px-0">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-7">
         {articles.map((articles, index) => {
           return <NewsCard key={index} article={articles} />;

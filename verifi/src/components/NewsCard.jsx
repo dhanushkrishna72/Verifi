@@ -6,7 +6,11 @@ const NewsCard = ({ article }) => {
   const { source, author, title, description, url, urlToImage, publishedAt } =
     article;
   return (
-    <div className="max-w-md mx-auto bg-pink-100 dark:bg-pink-700 hover:scale-105 transition-all rounded-xl overflow-hidden duration-300">
+    <div
+      className="max-w-md mx-auto bg-white dark:bg-slate-900
+border border-slate-200 dark:border-slate-800
+hover:bg-slate-50 dark:hover:bg-slate-800 hover:scale-105 transition-all rounded-xl overflow-hidden duration-300"
+    >
       <img
         src={urlToImage}
         alt={title}
@@ -14,23 +18,20 @@ const NewsCard = ({ article }) => {
       />
       <div className="p-4">
         <Link to={url}>
-          <h2
-            className="text-xl font-semibold dark:text-pink-200 text-pink-600
-          hover:text-pink-300 transition"
-          >
+          <h2 className="text-xl text-slate-900 dark:text-slate-50 font-bold transition">
             {title}
           </h2>
         </Link>
-        <p className="text-sm  dark:text-pink-200 text-pink-600">
+        <p className="text-sm  text-slate-600 dark:text-slate-300">
           {description?.length > 100
             ? description.slice(0, 100) + "..."
             : description}
         </p>
-        <div className="mt-4 text-sm dark:text-pink-200 text-pink-600">
+        <div className="mt-4 text-sm text-slate-700 dark:text-slate-400">
           <span>By {author || "Unkown"}</span>
           <span>{new Date(publishedAt).toLocaleDateString()}</span>
         </div>
-        <div className="mt-1 text-xs text-shadow-red-700 font-medium">
+        <div className="mt-1 text-xs text-blue-950 text-shadow-red-700 font-medium">
           Source: {source.name}
         </div>
       </div>
